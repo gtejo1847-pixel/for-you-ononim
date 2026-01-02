@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
@@ -23,7 +24,6 @@ body {
   border-radius: 20px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.15);
   animation: fadeIn 1.8s ease;
-  z-index: 1;
 }
 
 h1 {
@@ -32,7 +32,6 @@ h1 {
   margin-bottom: 24px;
 }
 
-/* PUISI RATA KIRI */
 .poem {
   text-align: left;
   font-size: 18px;
@@ -41,7 +40,6 @@ h1 {
   white-space: pre-line;
 }
 
-/* HINT */
 #hint {
   margin-top: 18px;
   text-align: center;
@@ -69,7 +67,6 @@ h1 {
   100% { opacity: .4 }
 }
 
-/* HATI */
 .heart {
   position: fixed;
   top: -10px;
@@ -114,11 +111,10 @@ bahwa percaya tidak selalu berakhir
 dengan kehilangan.
   </div>
 
-  <div id="hint">Tap di sini untuk memulai sesuatu</div>
+  <div id="hint">Tap di sini untuk memuncukan sesuatu</div>
   <div class="signature">— Djati</div>
 </div>
 
-<!-- AUDIO -->
 <audio id="music" loop>
   <source src="musik.mp3" type="audio/mpeg">
 </audio>
@@ -132,12 +128,11 @@ hint.addEventListener("click", async () => {
   if (started) return;
   try {
     await music.play();
-    music.volume = 0.6;
     started = true;
     hint.style.display = "none";
     startHearts();
   } catch (e) {
-    alert("Tap sekali lagi ya ");
+    alert("Tap sekali lagi ya");
   }
 });
 
